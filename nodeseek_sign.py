@@ -1,7 +1,7 @@
 import requests
 import os
 
-random = "false"  # 随机签到1-x鸡腿为true，固定鸡腿*5为false
+random = "true"  # 随机签到1-x鸡腿为true，固定鸡腿*5为false
 Cookie = os.environ.get("COOKIE","")
 pushplus_token = os.environ.get("PUSHPLUS_TOKEN")
 telegram_bot_token = os.environ.get("TELEGRAM_BOT_TOKEN","")
@@ -31,7 +31,7 @@ def pushplus_ts(token, rw, msg):
 if Cookie:
     url = f"https://www.nodeseek.com/api/attendance?random={random}"
     headers = {
-        'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0",
+        'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
         'sec-ch-ua': "\"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"",
         'sec-ch-ua-mobile': "?0",
         'sec-ch-ua-platform': "\"Windows\"",
